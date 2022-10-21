@@ -2,6 +2,10 @@ language: python
 
 install: 
   - pip install -r $PWD/mysite/requirements.txt
+  - pip install black
+  - python -m pip install flake8
+
 
 script:
   - black --check . || true
+  - flake8
