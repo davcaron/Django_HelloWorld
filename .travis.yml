@@ -1,4 +1,4 @@
 language: python
 
 install: 
-- pip install -r $PWD/mysites/requirements.txt
+- pip install -r $PWD/mysite/requirements.txt
