@@ -11,3 +11,4 @@ script:
   - black --check . || true
   - flake8
   - coverage run --source= $PWD/mysite/manage.py test
+  - coverall
