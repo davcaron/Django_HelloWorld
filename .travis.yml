@@ -1,4 +1,7 @@
 language: python
 
 install: 
-- pip install -r $PWD/mysite/requirements.txt
+  - pip install -r $PWD/mysite/requirements.txt
+
+script:
+  - black --check . || true
