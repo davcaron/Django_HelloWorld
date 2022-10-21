@@ -1,2 +1,4 @@
 language: python
 
+install: 
+- pip install -r mysites/requirements.txt
