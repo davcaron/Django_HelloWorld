@@ -5,6 +5,7 @@ python:
 
 install: 
   - pip install -r $PWD/mysite/requirements.txt
+  - python $PWD/mysite/manage.py migrate
 
 script:
   - black --check . || true
