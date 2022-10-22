@@ -49,7 +49,7 @@ class QuestionIndexViewTests(TestCase):
 
     # def test_past_question(self):
     #     """
-    #     Questions with a pub_date in the past are displayed on the 
+    #     Questions with a pub_date in the past are displayed on the
     #     index page.
     #     """
     #     question = create_question(question_text="Past question.", days=-30)
