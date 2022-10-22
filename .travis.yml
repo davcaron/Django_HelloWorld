@@ -1,12 +1,15 @@
 language: python
 
+python:
+- 3.7
+
 install: 
   - pip install -r $PWD/mysite/requirements.txt
-  - python -m pip install flake8
-
 
 script:
   - black --check . || true
   - flake8
   - coverage run --source= $PWD/mysite/manage.py test
-  - coverall
+  
+after script:
+  - coveralls
