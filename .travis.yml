@@ -8,7 +8,7 @@ install:
   - python $PWD/mysite/manage.py migrate
 
 script:
-  - black ./
+  - black ./ 
   - flake8 ./
   - coverage run --source= $PWD/mysite/manage.py test
   
