@@ -12,7 +12,7 @@ script:
   - flake8 ./
   - coverage run --source= $PWD/mysite/manage.py test
   
-after script:
+after script: 
   - coveralls
 
 deploy:
