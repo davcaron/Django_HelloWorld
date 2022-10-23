@@ -5,11 +5,23 @@ python:
 
 install: 
   - pip install -r $PWD/mysite/requirements.txt
+  - python $PWD/mysite/manage.py migrate
 
 script:
-  - black --check . || true
-  - flake8
+  - black ./
+  - flake8 ./
   - coverage run --source= $PWD/mysite/manage.py test
   
 after script:
   - coveralls
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_KEY
+  region: "us-east-1"
+  app: "polls"
+  env: "polls-dev"
+  bucket_name: "elasticbeanstalk-us-east-1-411766428159"
+  on:
+      branch: main
